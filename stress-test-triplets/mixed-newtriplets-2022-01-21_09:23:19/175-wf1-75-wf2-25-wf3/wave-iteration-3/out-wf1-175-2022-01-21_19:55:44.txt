@@ -1,0 +1,9 @@
+Requests      [total, rate]            157500, 175.00
+Duration      [total, attack, wait]    15m0.089777858s, 14m59.993018039s, 96.759819ms
+Latencies     [mean, 50, 95, 99, max]  156.295121ms, 86.102278ms, 662.827624ms, 1.71625184s, 3.753946441s
+Bytes In      [total, mean]            1189833568, 7554.50
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  69.23%
+Status Codes  [code:count]             0:48461  200:109039  
+Error Set:
+Get http://<none>:8080/: dial tcp: lookup <none>: no such host

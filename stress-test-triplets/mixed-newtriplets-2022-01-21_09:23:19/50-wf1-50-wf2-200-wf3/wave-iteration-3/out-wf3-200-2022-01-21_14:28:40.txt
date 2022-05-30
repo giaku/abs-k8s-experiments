@@ -1,0 +1,11 @@
+Requests      [total, rate]            180000, 200.00
+Duration      [total, attack, wait]    15m0.007924903s, 14m59.997902042s, 10.022861ms
+Latencies     [mean, 50, 95, 99, max]  10.004138ms, 10.485777ms, 15.574246ms, 19.447687ms, 819.149073ms
+Bytes In      [total, mean]            626553570, 3480.85
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  0.00%
+Status Codes  [code:count]             0:13846  404:13846  500:152308  
+Error Set:
+Get http://<none>:8080/product/6E92ZMYYFZ: dial tcp: lookup <none>: no such host
+404 Not Found
+500 Internal Server Error

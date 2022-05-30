@@ -1,0 +1,9 @@
+Requests      [total, rate]            112500, 125.00
+Duration      [total, attack, wait]    15m0.09932183s, 14m59.991776165s, 107.545665ms
+Latencies     [mean, 50, 95, 99, max]  218.573894ms, 132.180836ms, 742.721408ms, 1.951346037s, 3.619366356s
+Bytes In      [total, mean]            1211311202, 10767.21
+Bytes Out     [total, mean]            2812500, 25.00
+Success       [ratio]                  97.87%
+Status Codes  [code:count]             200:110106  500:2394  
+Error Set:
+500 Internal Server Error

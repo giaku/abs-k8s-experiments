@@ -1,0 +1,14 @@
+Requests      [total, rate]            180000, 200.00
+Duration      [total, attack, wait]    15m0.080232178s, 14m59.993632283s, 86.599895ms
+Latencies     [mean, 50, 95, 99, max]  109.925323ms, 54.609989ms, 459.603065ms, 1.496623059s, 3.619230026s
+Bytes In      [total, mean]            897818543, 4987.88
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  59.60%
+Status Codes  [code:count]             0:55385  200:107275  404:13846  500:3494  
+Error Set:
+Get http://<none>:8080/product/1YMWWN1N4O: dial tcp: lookup <none>: no such host
+Get http://<none>:8080/product/2ZYFJ3GM2N: dial tcp: lookup <none>: no such host
+Get http://<none>:8080/product/66VCHSJNUP: dial tcp: lookup <none>: no such host
+Get http://<none>:8080/product/6E92ZMYYFZ: dial tcp: lookup <none>: no such host
+404 Not Found
+500 Internal Server Error

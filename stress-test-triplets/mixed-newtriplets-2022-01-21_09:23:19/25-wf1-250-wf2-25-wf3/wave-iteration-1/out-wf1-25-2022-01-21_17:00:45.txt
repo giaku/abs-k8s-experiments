@@ -1,0 +1,10 @@
+Requests      [total, rate]            22500, 25.00
+Duration      [total, attack, wait]    14m59.972265584s, 14m59.959747511s, 12.518073ms
+Latencies     [mean, 50, 95, 99, max]  10.68698ms, 10.690276ms, 16.168566ms, 20.579671ms, 473.749947ms
+Bytes In      [total, mean]            85319052, 3791.96
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  0.00%
+Status Codes  [code:count]             0:1731  500:20769  
+Error Set:
+Get http://<none>:8080/: dial tcp: lookup <none>: no such host
+500 Internal Server Error

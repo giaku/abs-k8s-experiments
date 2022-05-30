@@ -1,0 +1,10 @@
+Requests      [total, rate]            67500, 75.00
+Duration      [total, attack, wait]    14m59.997973837s, 14m59.986481629s, 11.492208ms
+Latencies     [mean, 50, 95, 99, max]  12.57746ms, 12.672938ms, 18.407964ms, 23.01244ms, 757.983437ms
+Bytes In      [total, mean]            255961264, 3792.02
+Bytes Out     [total, mean]            1557700, 23.08
+Success       [ratio]                  0.00%
+Status Codes  [code:count]             0:5192  500:62308  
+Error Set:
+Post http://<none>:8080/setCurrency: dial tcp: lookup <none>: no such host
+500 Internal Server Error

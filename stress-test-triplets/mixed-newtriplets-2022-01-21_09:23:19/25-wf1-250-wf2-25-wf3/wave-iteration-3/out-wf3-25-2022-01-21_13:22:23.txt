@@ -1,0 +1,13 @@
+Requests      [total, rate]            22500, 25.00
+Duration      [total, attack, wait]    15m0.034742333s, 14m59.960293763s, 74.44857ms
+Latencies     [mean, 50, 95, 99, max]  135.873367ms, 71.839134ms, 505.787655ms, 1.219594518s, 2.686424998s
+Bytes In      [total, mean]            114016861, 5067.42
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  61.53%
+Status Codes  [code:count]             0:6924  200:13845  404:1731  
+Error Set:
+Get http://<none>:8080/product/1YMWWN1N4O: dial tcp: lookup <none>: no such host
+Get http://<none>:8080/product/2ZYFJ3GM2N: dial tcp: lookup <none>: no such host
+Get http://<none>:8080/product/66VCHSJNUP: dial tcp: lookup <none>: no such host
+Get http://<none>:8080/product/6E92ZMYYFZ: dial tcp: lookup <none>: no such host
+404 Not Found

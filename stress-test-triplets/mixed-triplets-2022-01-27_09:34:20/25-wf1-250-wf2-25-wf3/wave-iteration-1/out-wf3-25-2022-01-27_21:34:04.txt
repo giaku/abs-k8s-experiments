@@ -1,0 +1,9 @@
+Requests      [total, rate]            22500, 25.00
+Duration      [total, attack, wait]    15m0.056810682s, 14m59.956960478s, 99.850204ms
+Latencies     [mean, 50, 95, 99, max]  195.256851ms, 135.977568ms, 556.004846ms, 1.082845991s, 3.33525002s
+Bytes In      [total, mean]            171097032, 7604.31
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  92.31%
+Status Codes  [code:count]             200:20769  404:1731  
+Error Set:
+404 Not Found
