@@ -31,7 +31,8 @@ def replace_node_name(old_name):
     "IP:9100" : "worker1",
     "IP:9100" : "system-worker1",
     "IP:9100" : "system-worker2"}
-  return node_dict[old_name]
+  # return node_dict[old_name]
+  return old_name
 
 def fetch_nodes_metrics(sc,start,nf_name,data):
   if(time.time()-start < wave_duration):
