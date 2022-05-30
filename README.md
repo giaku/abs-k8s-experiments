@@ -1,7 +1,9 @@
 # abs-k8s-experiments
 This repository contains all scripts used to run the experiments on a OpenStack cluster.
 
-Folder "calibration" contains the generic scripts for retrieving cost tables data, "calibration-node-A" shows an example of how the output folder will look like once the calibration scripts have terminated.
+Folder "calibration" contains the generic scripts for retrieving cost tables data.
+
+Folder "calibration-node-A" shows an example of how the output folder will look like once the calibration scripts have terminated.
 
 # Requirements:
 
