@@ -20,15 +20,16 @@ PROMETHEUS = 'http://localhost:9090/metrics'
 
 def replace_node_name(old_name):
   node_dict={
-    "158.39.201.62:9100" : "vegeta",
-    "158.39.201.93:9100" : "worker3",
-    "158.39.77.170:9100" : "master",
-    "158.39.77.17:9100" : "worker4",
-    "158.39.77.85:9100" : "worker2",
-    "158.39.201.212:9100" : "worker1",
-    "158.39.201.248:9100" : "system-worker1",
-    "158.39.201.31:9100" : "system-worker2"}
-  return node_dict[old_name]
+    "IP:9100" : "vegeta",
+    "IP:9100" : "worker3",
+    "IP:9100" : "master",
+    "IP:9100" : "worker4",
+    "IP:9100" : "worker2",
+    "IP:9100" : "worker1",
+    "IP:9100" : "system-worker1",
+    "IP:9100" : "system-worker2"}
+  # return node_dict[old_name]
+  return old_name
 
 def fetch_nodes_metrics(sc,start,nf_name,data):
   if(time.time()-start < wave_duration):
