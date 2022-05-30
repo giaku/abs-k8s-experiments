@@ -18,4 +18,4 @@ then
   exit 1
 fi
 
-ssh root@master kubectl delete deploy -n $ns $deploy
+kubectl delete deploy -n $ns $deploy
