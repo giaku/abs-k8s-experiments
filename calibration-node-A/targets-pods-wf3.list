@@ -1,0 +1,2 @@
+GET http://10.244.2.56:8080/product/0PUK6V6EV0
+GET http://10.244.2.54:8080/product/1YMWWN1N4O

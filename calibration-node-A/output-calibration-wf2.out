@@ -1,0 +1,328 @@
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@ NEW TEST STARTING HERE @@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+./test.sh: line 7: [calibration-wf2-: command not found
+./test.sh: line 13: [1: command not found
+Starting calibration stress test... Estimated time: 180 minutes
+Iteration 1 of 1
+Wave calibration: wf2 rate: 25
+   start: 2021-10-18_12:45:26
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/25-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/25-wf2-/out-2021-10-18_12:45:26.txt: No such file or directory
+Requests      [total, rate]            22500, 25.00
+Duration      [total, attack, wait]    15m0.008157316s, 14m59.960023414s, 48.133902ms
+Latencies     [mean, 50, 95, 99, max]  73.080506ms, 42.043636ms, 220.371823ms, 833.941747ms, 2.125812565s
+Bytes In      [total, mean]            245520000, 10912.00
+Bytes Out     [total, mean]            562500, 25.00
+Success       [ratio]                  100.00%
+Status Codes  [code:count]             200:22500  
+Error Set:
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/25-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/25-wf2-/wave-iteration-1/out-wf2-25-2021-10-18_12:45:26.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 25 - iteration 1
+Finished
+Iteration 1 of 1
+Wave calibration: wf2 rate: 50
+   start: 2021-10-18_13:08:12
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/50-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/50-wf2-/out-2021-10-18_13:08:12.txt: No such file or directory
+Requests      [total, rate]            45000, 50.00
+Duration      [total, attack, wait]    15m0.018785725s, 14m59.979979741s, 38.805984ms
+Latencies     [mean, 50, 95, 99, max]  98.23532ms, 50.277369ms, 438.169734ms, 1.03554765s, 2.68050741s
+Bytes In      [total, mean]            491040000, 10912.00
+Bytes Out     [total, mean]            1125000, 25.00
+Success       [ratio]                  100.00%
+Status Codes  [code:count]             200:45000  
+Error Set:
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/50-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/50-wf2-/wave-iteration-1/out-wf2-50-2021-10-18_13:08:12.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 50 - iteration 1
+Finished
+Iteration 1 of 1
+Wave calibration: wf2 rate: 75
+   start: 2021-10-18_13:30:58
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/75-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/75-wf2-/out-2021-10-18_13:30:58.txt: No such file or directory
+Requests      [total, rate]            67500, 75.00
+Duration      [total, attack, wait]    15m0.051386564s, 14m59.986712211s, 64.674353ms
+Latencies     [mean, 50, 95, 99, max]  119.966352ms, 71.794427ms, 421.282212ms, 1.072383189s, 3.044111438s
+Bytes In      [total, mean]            736559988, 10912.00
+Bytes Out     [total, mean]            1687500, 25.00
+Success       [ratio]                  100.00%
+Status Codes  [code:count]             200:67500  
+Error Set:
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/75-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/75-wf2-/wave-iteration-1/out-wf2-75-2021-10-18_13:30:58.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 75 - iteration 1
+Finished
+Iteration 1 of 1
+Wave calibration: wf2 rate: 100
+   start: 2021-10-18_13:53:44
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/100-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/100-wf2-/out-2021-10-18_13:53:44.txt: No such file or directory
+Requests      [total, rate]            90000, 100.00
+Duration      [total, attack, wait]    15m0.074344029s, 14m59.990109989s, 84.23404ms
+Latencies     [mean, 50, 95, 99, max]  247.25564ms, 144.789802ms, 929.330218ms, 1.969192245s, 3.409556907s
+Bytes In      [total, mean]            982079932, 10912.00
+Bytes Out     [total, mean]            2250000, 25.00
+Success       [ratio]                  100.00%
+Status Codes  [code:count]             200:90000  
+Error Set:
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/100-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/100-wf2-/wave-iteration-1/out-wf2-100-2021-10-18_13:53:44.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 100 - iteration 1
+Finished
+Iteration 1 of 1
+Wave calibration: wf2 rate: 125
+   start: 2021-10-18_14:16:30
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/125-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/125-wf2-/out-2021-10-18_14:16:30.txt: No such file or directory
+Requests      [total, rate]            45382, 124.99
+Duration      [total, attack, wait]    6m3.286604029s, 6m3.095918891s, 190.685138ms
+Latencies     [mean, 50, 95, 99, max]  368.816772ms, 275.714436ms, 1.012767282s, 1.667876288s, 3.823716755s
+Bytes In      [total, mean]            477150328, 10514.09
+Bytes Out     [total, mean]            1134550, 25.00
+Success       [ratio]                  94.15%
+Status Codes  [code:count]             200:42726  500:2656  
+Error Set:
+500 Internal Server Error
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/125-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/125-wf2-/wave-iteration-1/out-wf2-125-2021-10-18_14:16:30.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 125 - iteration 1
+Finished
+Iteration 1 of 1
+Wave calibration: wf2 rate: 150
+   start: 2021-10-18_14:30:19
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/150-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/150-wf2-/out-2021-10-18_14:30:19.txt: No such file or directory
+Requests      [total, rate]            135000, 150.00
+Duration      [total, attack, wait]    15m0.266416309s, 14m59.993319416s, 273.096893ms
+Latencies     [mean, 50, 95, 99, max]  706.518134ms, 590.352514ms, 1.506664931s, 2.361460877s, 4.928449296s
+Bytes In      [total, mean]            1450399680, 10743.70
+Bytes Out     [total, mean]            3375000, 25.00
+Success       [ratio]                  97.52%
+Status Codes  [code:count]             200:131658  500:3342  
+Error Set:
+500 Internal Server Error
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/150-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/150-wf2-/wave-iteration-1/out-wf2-150-2021-10-18_14:30:19.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 150 - iteration 1
+Finished
+Iteration 1 of 1
+Wave calibration: wf2 rate: 175
+   start: 2021-10-18_14:53:05
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/175-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/175-wf2-/out-2021-10-18_14:53:05.txt: No such file or directory
+Requests      [total, rate]            157500, 175.00
+Duration      [total, attack, wait]    15m0.882367721s, 14m59.994356066s, 888.011655ms
+Latencies     [mean, 50, 95, 99, max]  1.677307006s, 1.531060072s, 2.854112341s, 3.79764653s, 5.550644804s
+Bytes In      [total, mean]            1718640000, 10912.00
+Bytes Out     [total, mean]            3937500, 25.00
+Success       [ratio]                  100.00%
+Status Codes  [code:count]             200:157500  
+Error Set:
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/175-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/175-wf2-/wave-iteration-1/out-wf2-175-2021-10-18_14:53:05.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 175 - iteration 1
+Finished
+Iteration 1 of 1
+Wave calibration: wf2 rate: 200
+   start: 2021-10-18_15:15:52
+   duration: 900s
+Pod names before attack available in file calibration-wf2-2021-10-18_12:45:24/200-wf2-/wave-iteration-1/pod_names2_dumps/before
+start polling metrics offset 270
+end polling metrics offset 630
+./test.sh: line 104: /root/new-calibration-old-paper/calibration-wf2-2021-10-18_12:45:24/200-wf2-/out-2021-10-18_15:15:52.txt: No such file or directory
+Requests      [total, rate]            180000, 200.00
+Duration      [total, attack, wait]    15m2.764515757s, 14m59.995030232s, 2.769485525s
+Latencies     [mean, 50, 95, 99, max]  4.009215328s, 4.071744766s, 5.197066415s, 5.666285363s, 6.992692199s
+Bytes In      [total, mean]            1936454432, 10758.08
+Bytes Out     [total, mean]            4436525, 24.65
+Success       [ratio]                  98.59%
+Status Codes  [code:count]             0:2539  200:177461  
+Error Set:
+Post http://10.244.2.229:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.229:8080: socket: too many open files
+Post http://10.244.2.230:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.230:8080: socket: too many open files
+Post http://10.244.2.230:8080/: dial tcp 0.0.0.0:0->10.244.2.230:8080: socket: too many open files
+Pod names after attack available in file calibration-wf2-2021-10-18_12:45:24/200-wf2-/wave-iteration-1/pod_names2_dumps/after
+Result file:
+./calibration-wf2-2021-10-18_12:45:24/200-wf2-/wave-iteration-1/out-wf2-200-2021-10-18_15:15:52.txt
+./helpers/delete_evicted.sh: line 4: [md2: command not found
+nothing evicted
+Deleting deployments frontend and currencyservice
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [frontend-w2: command not found
+deployment.apps "frontend-w2" deleted
+./helpers/delete_deploy.sh: line 9: [md2: command not found
+./helpers/delete_deploy.sh: line 15: [currencyservice-w2: command not found
+deployment.apps "currencyservice-w2" deleted
+Deleted currencyservice and frontend deployments. Now recreating...
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml: No such file or directory
+deployment.apps/frontend-w2 created
+./helpers/apply_deploy.sh: line 9: [md2: command not found
+./helpers/apply_deploy.sh: line 15: [/root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml: No such file or directory
+deployment.apps/currencyservice-w2 created
+Recreated frontend and currencyservice deployments
+vegeta resting for 450 seconds...
+Finished workflows wf2 at rate 200 - iteration 1
+Finished
+Total errors: 0

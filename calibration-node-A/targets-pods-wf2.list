@@ -1,0 +1,4 @@
+POST http://10.244.2.164:8080/setCurrency
+@helpers/wf2args.json
+POST http://10.244.2.168:8080/setCurrency
+@helpers/wf2args.json

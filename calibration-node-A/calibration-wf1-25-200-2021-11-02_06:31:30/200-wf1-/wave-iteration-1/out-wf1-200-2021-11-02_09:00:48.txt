@@ -1,0 +1,10 @@
+Requests      [total, rate]            180000, 200.00
+Duration      [total, attack, wait]    15m2.433596197s, 14m59.994312701s, 2.439283496s
+Latencies     [mean, 50, 95, 99, max]  4.373186292s, 4.444870148s, 5.715902577s, 6.29635753s, 8.461471868s
+Bytes In      [total, mean]            1915372448, 10640.96
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  97.52%
+Status Codes  [code:count]             0:4471  200:175529  
+Error Set:
+Get http://10.244.2.232:8080/: dial tcp 0.0.0.0:0->10.244.2.232:8080: socket: too many open files
+Get http://10.244.2.231:8080/: dial tcp 0.0.0.0:0->10.244.2.231:8080: socket: too many open files
