@@ -22,6 +22,12 @@ Virtual Machine OS: Centos 7
 
 Kubernetes version: 1.19
 
+Prometheus and Grafana stack installed [(see guide)](https://k21academy.com/docker-kubernetes/prometheus-grafana-monitoring/) via [helm](https://helm.sh/docs/intro/install/)
+
+[Istio](https://istio.io/latest/docs/setup/getting-started/#download)
+
+[Online boutique](https://github.com/GoogleCloudPlatform/microservices-demo)
+
 Container runtime: Docker 20.10
 
 Python for metrics polling script: 3.8
