@@ -6,8 +6,12 @@ Folder "calibration" contains the generic scripts for retrieving cost tables dat
 # Requirements:
 
 Virtual Machine OS: Centos 7
+
 Kubernetes version: 1.19
+
 Container runtime: Docker
+
 Python for metrics polling script: 3.8
+
 Stress test tool: Vegeta (https://github.com/tsenart/vegeta)
 
