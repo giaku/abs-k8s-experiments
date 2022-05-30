@@ -7,6 +7,8 @@ Folder "calibration-node-A" shows an example of how the output folder will look 
 
 Folder "stress-test-pairs" shows an example of how the script from calibration has been modified for running two stress tests simultaneously in order to perform the experiments with pairs of workflows together.
 
+Folder "stress-test-triplets" shows an example of the stress test script to perform the experiments with triplets of workflows together.
+
 # Requirements:
 
 Virtual Machine OS: Centos 7
