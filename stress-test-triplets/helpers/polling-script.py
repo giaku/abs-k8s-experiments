@@ -109,7 +109,8 @@ def shift_node_name(old_name,shift):
       "worker--4.novalocal" : "worker--1",
       "system-woker.novalocal" : "system-worker1",
       "system-woker2.novalocal" : "system-worker2"}
-  return node_dict[old_name]
+  # return node_dict[old_name]
+  return old_name
 
 def fetch_nodes_metrics(sc,start,nf_name,data,shift):
   if(time.time()-start < wave_duration):
