@@ -15,5 +15,5 @@ if test -z "$evicting"
 then
   echo "nothing evicted"
 else
-  ssh root@master /root/delete_evicted.sh $ns
+  kubectl delete pods -n $ns $(kubectl get pods -n $ns | grep Evicted | awk '{print $1;}')
 fi
