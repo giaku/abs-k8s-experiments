@@ -21,50 +21,52 @@ pathn = sys.argv[5]
 pathp2 = sys.argv[6]
 shift = sys.argv[7]
 
-PROMETHEUS = 'http://localhost:9090/metrics'
+# REPLACE WITH PROMETHEUS URL
+PROMETHEUS = "http://10.101.120.229:9090/"
 
 def replace_node_name(old_name,shift):
   s=int(shift)
   node_dict={
-    "158.39.201.62:9100" : "vegeta",
-    "158.39.201.93:9100" : "worker3",
-    "158.39.77.170:9100" : "master",
-    "158.39.77.17:9100" : "worker4",
-    "158.39.77.85:9100" : "worker2",
-    "158.39.201.212:9100" : "worker1",
-    "158.39.201.248:9100" : "system-worker1",
-    "158.39.201.31:9100" : "system-worker2"}
+    "IP:9100" : "vegeta",
+    "IP:9100" : "worker3",
+    "IP:9100" : "master",
+    "IP:9100" : "worker4",
+    "IP:9100" : "worker2",
+    "IP:9100" : "worker1",
+    "IP:9100" : "system-worker1",
+    "IP:9100" : "system-worker2"}
   if s==1:
     node_dict={
-      "158.39.201.62:9100" : "vegeta",
-      "158.39.201.93:9100" : "worker4",
-      "158.39.77.170:9100" : "master",
-      "158.39.77.17:9100" : "worker1",
-      "158.39.77.85:9100" : "worker3",
-      "158.39.201.212:9100" : "worker2",
-      "158.39.201.248:9100" : "system-worker1",
-      "158.39.201.31:9100" : "system-worker2"}
+      "IP:9100" : "vegeta",
+      "IP:9100" : "worker4",
+      "IP:9100" : "master",
+      "IP:9100" : "worker1",
+      "IP:9100" : "worker3",
+      "IP:9100" : "worker2",
+      "IP:9100" : "system-worker1",
+      "IP:9100" : "system-worker2"}
   elif s==2:
     node_dict={
-      "158.39.201.62:9100" : "vegeta",
-      "158.39.201.93:9100" : "worker1",
-      "158.39.77.170:9100" : "master",
-      "158.39.77.17:9100" : "worker2",
-      "158.39.77.85:9100" : "worker4",
-      "158.39.201.212:9100" : "worker3",
-      "158.39.201.248:9100" : "system-worker1",
-      "158.39.201.31:9100" : "system-worker2"}
+      "IP:9100" : "vegeta",
+      "IP:9100" : "worker1",
+      "IP:9100" : "master",
+      "IP:9100" : "worker2",
+      "IP:9100" : "worker4",
+      "IP:9100" : "worker3",
+      "IP:9100" : "system-worker1",
+      "IP:9100" : "system-worker2"}
   elif s==3:
     node_dict={
-      "158.39.201.62:9100" : "vegeta",
-      "158.39.201.93:9100" : "worker2",
-      "158.39.77.170:9100" : "master",
-      "158.39.77.17:9100" : "worker3",
-      "158.39.77.85:9100" : "worker1",
-      "158.39.201.212:9100" : "worker4",
-      "158.39.201.248:9100" : "system-worker1",
-      "158.39.201.31:9100" : "system-worker2"}
-  return node_dict[old_name]
+      "IP:9100" : "vegeta",
+      "IP:9100" : "worker2",
+      "IP:9100" : "master",
+      "IP:9100" : "worker3",
+      "IP:9100" : "worker1",
+      "IP:9100" : "worker4",
+      "IP:9100" : "system-worker1",
+      "IP:9100" : "system-worker2"}
+  # return node_dict[old_name]
+  return old_name
 
 def shift_node_name(old_name,shift):
   s=int(shift)
@@ -209,7 +211,7 @@ def fetch_pods_metrics_no_istio(sc,start,pf_ni_name,data,shift):
 #{'metric': {'node': '', 'pod': '', 'sname': 'currencyservice', 'workload': 'currencyservice-w4'}, 'value': [1633946593.309, '0.007184996306714634']}
 
 #first establish connection to prometheus server
-prom = PrometheusConnect(url ="http://10.101.120.229:9090/", disable_ssl=True)
+prom = PrometheusConnect(url = PROMETHEUS, disable_ssl=True)
 
 start_time = time.time()
 
