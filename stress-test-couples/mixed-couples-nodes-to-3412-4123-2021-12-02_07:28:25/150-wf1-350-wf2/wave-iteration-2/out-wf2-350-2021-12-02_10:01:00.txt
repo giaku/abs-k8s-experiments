@@ -1,0 +1,19 @@
+Requests      [total, rate]            315001, 350.00
+Duration      [total, attack, wait]    15m1.64974053s, 14m59.999769253s, 1.649971277s
+Latencies     [mean, 50, 95, 99, max]  1.980894841s, 1.437492518s, 5.493542512s, 7.320708509s, 12.294390863s
+Bytes In      [total, mean]            3365045603, 10682.65
+Bytes Out     [total, mean]            7709525, 24.47
+Success       [ratio]                  97.90%
+Status Codes  [code:count]             0:6620  200:308381  
+Error Set:
+Post http://10.244.4.220:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.4.220:8080: socket: too many open files
+Post http://10.244.1.86:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.1.86:8080: socket: too many open files
+Post http://10.244.5.19:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.5.19:8080: socket: too many open files
+Post http://10.244.4.219:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.4.219:8080: socket: too many open files
+Post http://10.244.5.18:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.5.18:8080: socket: too many open files
+Post http://10.244.5.17:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.5.17:8080: socket: too many open files
+Post http://10.244.1.87:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.1.87:8080: socket: too many open files
+Post http://10.244.1.85:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.1.85:8080: socket: too many open files
+Post http://10.244.2.79:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.79:8080: socket: too many open files
+Post http://10.244.2.80:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.80:8080: socket: too many open files
+Post http://10.244.1.86:8080/: dial tcp 0.0.0.0:0->10.244.1.86:8080: socket: too many open files
