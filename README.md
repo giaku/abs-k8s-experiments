@@ -1,7 +1,7 @@
 # abs-k8s-experiments
 This repository contains all scripts used to run the experiments on a Kubernetes cluster, many configurations are to be changed in order to replicate the same experiments in another cluster, however the distinction between the main script and the helper scripts should make it straightforward to adapt to different clusters.
 
-In "microservices-demo" that contains the deployment files used during the experiments. The deployments files are provided as they were during the experiments, in order to use them, follow the instraction in the README of the microservices-demo/node-deployments folder. 
+In "microservices-demo" that contains the deployment files used during the experiments. The deployments files are provided as they were during the experiments, in order to use them, follow the instructions [microservices-demo/node-deployments folder](https://github.com/giaku/abs-k8s-experiments/tree/main/microservices-demo/nodes-deployments). 
 
 The structure is the same for all the other folders:
 
