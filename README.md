@@ -9,13 +9,17 @@ Folder "stress-test-pairs" shows an example of how the script from calibration h
 
 Folder "stress-test-triplets" shows an example of the stress test script to perform the experiments with triplets of workflows together.
 
-# Requirements:
+# Experimental setup:
+
+The scripts must be run on the master node or on a node with the rights edit Kubernetes resources. The stress test tool Vegeta can be run on the master node or elsewhere by by editing the helper script attack.sh which assumes Vegeta is installed on the machine.
+
+
 
 Virtual Machine OS: Centos 7
 
 Kubernetes version: 1.19
 
-Container runtime: Docker
+Container runtime: Docker 20.10
 
 Python for metrics polling script: 3.8
 
