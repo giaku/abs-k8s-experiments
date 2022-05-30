@@ -26,5 +26,5 @@ Container runtime: Docker 20.10
 
 Python for metrics polling script: 3.8
 
-Stress test tool: Vegeta (https://github.com/tsenart/vegeta)
+Stress test tool: [Vegeta](https://github.com/tsenart/vegeta)
 
