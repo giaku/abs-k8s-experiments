@@ -18,4 +18,4 @@ then
   exit 1
 fi
 
-ssh root@master kubectl apply -n $ns -f $deploy
+kubectl apply -n $ns -f $deploy
