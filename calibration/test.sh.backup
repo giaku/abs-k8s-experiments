@@ -1,0 +1,166 @@
+#!/bin/bash
+
+# Simulation params
+#$1 is the name prefix for the folder
+#$2 is the number of iterations every wave must accomplish
+
+if [$1 -e ""]
+then
+  printf "Folder prefix name parameter is required to keep it tidy.\n"
+  exit 1
+fi
+
+if [$2 -e ""]
+then
+  printf "Please insert the number of iterations that you always forget to change as second param.\n"
+  exit 1
+fi
+
+#DURATION=450s
+DURATION=900s
+#INT_DUR=450
+INT_DUR=900
+
+#interval between waves in seconds
+#interval=450
+interval=450
+
+iterations=$2
+
+#RPS=(  "175")
+#RPS=( "25"  "50"  "75" "100" "125" "150" "175" "200" )
+
+WF=(  "wf2" "wf2" "wf2" "wf2" "wf2" "wf2" "wf2" "wf2" )
+
+
+#RPS=( "25" "50" "75" "100" "125" "150" "175" "200" )
+
+RPS=( "25" "50" "75" "100")
+# "400" "500" "600" "700" "800" )
+
+
+##RPS=( "150" "200" "250" "300" "350" "400" "450" "500")
+#WF=(   "wf3" "wf3" "wf3" "wf3" "wf3" "wf3" "wf3" "wf3" )
+WF=(   "wf1" "wf1" "wf1" "wf1" )
+#"wf1" "wf1")
+
+
+WF2=(   "wf2" "wf2" "wf2" "wf2" )
+#"wf2" "wf2")
+RPS2=( "25" "50" "75" "100")
+
+#WF=( "wf2" "wf2" "wf2" "wf2" "wf2" "wf2" "wf2" "wf2" )
+
+#RPS=( "100" "100" "100")
+#WF=(  "wf1" "wf2" "wf3")
+#-----|-----|-----|-----|-----|-----|
+
+length=${#RPS[@]}
+printf "Starting calibration stress test... Estimated time: $(((interval+INT_DUR)*iterations*length/60)) minutes\n"
+
+rundir=$1$(date '+%F_%T')
+mkdir $rundir
+
+errors=0
+
+for j in ${!RPS[@]}; do
+
+  workdir=`echo "$rundir""/${RPS[j]}-${WF[j]}-${RPS2[j]}-${WF2[j]}"`
+  mkdir $workdir
+
+  i=1
+  while [ $i -lt $(($iterations+1)) ]
+  do
+    ./helpers/update-target-pods-${WF[j]}.sh
+    ./helpers/update-target-pods-${WF2[j]}.sh
+    sleep 1
+  
+    printf "Iteration $i of $iterations"
+    now=$(date '+%F_%T')
+    echo $now >> $workdir/timestamps
+    ./helpers/get_interval_from_ts.sh $now $INT_DUR  >> $workdir/timeintervals
+    printf "\nWave calibration: ${WF[j]} rate: ${RPS[j]}\n   start: $now\n   duration: $DURATION\n"
+# modified to do double
+    printf "\nTogether with wave calibration: ${WF[j]} rate: ${RPS[j]}\n   start: $now\n   duration: $DURATION\n"
+    wavedir=$workdir/wave-iteration-$i
+    [ ! -d "$wavedir" ] && mkdir $wavedir
+
+    pod_names_file2=$(echo "$wavedir""/pod_names2_dumps")
+    [ ! -d "$pod_names_file2" ] && mkdir $pod_names_file2
+    ./helpers/dump_pod_names.sh $pod_names_file2 before md2
+
+    start_offset=$(($INT_DUR*3/10))
+    end_offset=$(($INT_DUR*7/10))
+
+    echo "start polling metrics offset $start_offset"
+    echo "end polling metrics offset $end_offset"
+
+    python3.8 /root/new-calibration-old-paper/helpers/polling-script.py $start_offset 15 $end_offset /root/new-calibration-old-paper/$workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-pods.csv /root/new-calibration-old-paper/$workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-nodes.csv >> /root/new-calibration-old-paper/$workdir/out-$now.txt &
+    #./helpers/get-metrics.sh /root/new-calibration-old-paper/helpers/polling_script.py $start_offset 15 $end_offset $workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-pods.csv $workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-nodes.csv out-$now.txt &
+
+    ./helpers/attack.sh $DURATION $(echo "${RPS[j]}") $(echo "targets-pods-${WF[j]}.list") $(echo "./$wavedir/out-${WF[j]}-${RPS[j]}-$now.txt") &
+    ./helpers/attack.sh $DURATION $(echo "${RPS2[j]}") $(echo "targets-pods-${WF2[j]}.list") $(echo "./$wavedir/out-${WF2[j]}-${RPS2[j]}-$now.txt")
+    wait
+
+    ./helpers/dump_pod_names.sh $pod_names_file2 after md2
+    diffs=$(diff $(echo "$pod_names_file2""/before") $(echo "$pod_names_file2""/after"))
+
+    if test -z "$diffs"
+    then
+      i=$[$i+1]
+      echo "Result file:"
+      echo "./$wavedir/out-${WF[j]}-${RPS[j]}-$now.txt"
+      #else
+      #  echo "Something went wrong with single node deploy... deleting data and repeating iteration $i..."
+      #  sed -i '$ d' $workdir/timestamps
+      #  sed -i '$ d' $workdir/timeintervals
+      #  mv $(echo "./$wavedir/out-${WF[j]}-${RPS[j]}-$now.txt") $(echo "./$wavedir/out-${WF[j]}-${RPS[j]}-$now-error-$errors.txt")
+      #  errors=$(($errors+1))
+    else
+      echo "Something went wrong with 2 nodes deploy... deleting data and repeating iteration $i..."
+      sed -i '$ d' $workdir/timestamps
+      sed -i '$ d' $workdir/timeintervals
+      mv $(echo "./$wavedir/out-${WF[j]}-${RPS[j]}-$now.txt") $(echo "./$wavedir/out-${WF[j]}-${RPS[j]}-$now-error-$errors.txt")
+      errors=$(($errors+1))
+    fi
+    sleep 1
+    ./helpers/delete_evicted.sh md2
+    sleep 3
+
+    printf "Deleting deployments frontend and currencyservice\n"
+
+#    ./helpers/delete_deploy.sh md2 frontend-w1
+    ./helpers/delete_deploy.sh md2 frontend-w2
+#    ./helpers/delete_deploy.sh md2 frontend-w3
+#    ./helpers/delete_deploy.sh md2 frontend-w4
+#    ./helpers/delete_deploy.sh md2 currencyservice-w1
+    ./helpers/delete_deploy.sh md2 currencyservice-w2
+#    ./helpers/delete_deploy.sh md2 currencyservice-w3
+#    ./helpers/delete_deploy.sh md2 currencyservice-w4
+
+    sleep 3
+    printf "Deleted currencyservice and frontend deployments. Now recreating...\n"
+
+#    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/frontend-worker1-2pods.yaml
+    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml
+#    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/frontend-worker3-2pods.yaml
+#    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/frontend-worker4-2pods.yaml
+#    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/currencyservice-worker1-2pods.yaml
+    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml
+#    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/currencyservice-worker3-2pods.yaml
+#    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/currencyservice-worker4-2pods.yaml
+
+    sleep 3
+    printf "Recreated frontend and currencyservice deployments\n"
+
+
+
+    printf "vegeta resting for $interval seconds...\n"
+    sleep $interval
+    printf "Finished workflows ${WF[j]} at rate ${RPS[j]} - iteration $(($i-1))\n"
+  done
+  echo "Finished"
+# couple ${WF[j]} ${WF2[j]} with rates: ${RPS[j]} ${RPS2[j]}"
+done
+echo "Total errors: $errors"
+exit 0
