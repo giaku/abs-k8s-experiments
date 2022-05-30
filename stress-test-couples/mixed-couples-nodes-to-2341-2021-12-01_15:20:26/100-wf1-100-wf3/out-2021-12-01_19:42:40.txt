@@ -1,3 +1,0 @@
-Fetching pods without istio metrics...
-Consumptions of all pods in md2 instant (list of value for each pod):
-
