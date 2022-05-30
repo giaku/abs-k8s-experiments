@@ -139,10 +139,10 @@ for j in ${!RPS[@]}; do
     sleep 3
     printf "Deleted deployments. Now recreating...\n"
 
-    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml
-    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml
-    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/productcatalogservice-worker2-2pods.yaml
-    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/recommendationservice-worker2-2pods.yaml
+    ./helpers/apply_deploy.sh md2 ../microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml
+    ./helpers/apply_deploy.sh md2 ../microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml
+    ./helpers/apply_deploy.sh md2 ../microservices-demo/nodes-deployments/productcatalogservice-worker2-2pods.yaml
+    ./helpers/apply_deploy.sh md2 ../microservices-demo/nodes-deployments/recommendationservice-worker2-2pods.yaml
     sleep 3
     printf "Recreated frontend and currencyservice deployments\n"
 
