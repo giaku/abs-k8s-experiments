@@ -1,0 +1,24 @@
+Requests      [total, rate]            382500, 425.00
+Duration      [total, attack, wait]    15m3.62736517s, 14m59.997063638s, 3.630301532s
+Latencies     [mean, 50, 95, 99, max]  2.296348628s, 1.801895235s, 7.968810183s, 12.7518384s, 24.870462187s
+Bytes In      [total, mean]            2666783668, 6971.98
+Bytes Out     [total, mean]            6109750, 15.97
+Success       [ratio]                  63.89%
+Status Codes  [code:count]             0:138110  200:244390  
+Error Set:
+Post http://10.244.4.27:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.4.27:8080: socket: too many open files
+Post http://10.244.2.15:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.15:8080: socket: too many open files
+Post http://10.244.5.73:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.5.73:8080: socket: too many open files
+Post http://10.244.5.72:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.5.72:8080: socket: too many open files
+Post http://10.244.4.28:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.4.28:8080: socket: too many open files
+Post http://10.244.1.49:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.1.49:8080: socket: too many open files
+Post http://10.244.1.50:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.1.50:8080: socket: too many open files
+Post http://10.244.2.14:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.14:8080: socket: too many open files
+Post http://10.244.4.27:8080/: dial tcp 0.0.0.0:0->10.244.4.27:8080: socket: too many open files
+Post http://10.244.5.73:8080/: dial tcp 0.0.0.0:0->10.244.5.73:8080: socket: too many open files
+Post http://10.244.1.50:8080/: dial tcp 0.0.0.0:0->10.244.1.50:8080: socket: too many open files
+Post http://10.244.2.15:8080/: dial tcp 0.0.0.0:0->10.244.2.15:8080: socket: too many open files
+Post http://10.244.5.72:8080/: dial tcp 0.0.0.0:0->10.244.5.72:8080: socket: too many open files
+Post http://10.244.4.28:8080/: dial tcp 0.0.0.0:0->10.244.4.28:8080: socket: too many open files
+Post http://10.244.2.14:8080/: dial tcp 0.0.0.0:0->10.244.2.14:8080: socket: too many open files
+Post http://10.244.1.49:8080/: dial tcp 0.0.0.0:0->10.244.1.49:8080: socket: too many open files

@@ -1,0 +1,9 @@
+Requests      [total, rate]            157500, 175.00
+Duration      [total, attack, wait]    15m4.143456403s, 14m59.992866314s, 4.150590089s
+Latencies     [mean, 50, 95, 99, max]  3.016376046s, 1.736769162s, 9.849002247s, 12.786239125s, 17.940225828s
+Bytes In      [total, mean]            1275116573, 8095.98
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  99.98%
+Status Codes  [code:count]             0:34  200:157466  
+Error Set:
+Get http://10.244.4.167:8080/product/L9ECAV7KIM: dial tcp 0.0.0.0:0->10.244.4.167:8080: socket: too many open files

@@ -1,0 +1,23 @@
+Requests      [total, rate]            225000, 250.00
+Duration      [total, attack, wait]    15m3.830718524s, 14m59.996066863s, 3.834651661s
+Latencies     [mean, 50, 95, 99, max]  3.788228169s, 3.055880749s, 11.140307565s, 14.253923199s, 24.998509209s
+Bytes In      [total, mean]            1954633824, 8687.26
+Bytes Out     [total, mean]            4478175, 19.90
+Success       [ratio]                  79.61%
+Status Codes  [code:count]             0:45873  200:179127  
+Error Set:
+Post http://10.244.2.145:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.145:8080: socket: too many open files
+Post http://10.244.5.203:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.5.203:8080: socket: too many open files
+Post http://10.244.4.159:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.4.159:8080: socket: too many open files
+Post http://10.244.1.181:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.1.181:8080: socket: too many open files
+Post http://10.244.4.160:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.4.160:8080: socket: too many open files
+Post http://10.244.1.180:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.1.180:8080: socket: too many open files
+Post http://10.244.2.144:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.2.144:8080: socket: too many open files
+Post http://10.244.5.204:8080/setCurrency: dial tcp 0.0.0.0:0->10.244.5.204:8080: socket: too many open files
+Post http://10.244.2.145:8080/: dial tcp 0.0.0.0:0->10.244.2.145:8080: socket: too many open files
+Post http://10.244.5.203:8080/: dial tcp 0.0.0.0:0->10.244.5.203:8080: socket: too many open files
+Post http://10.244.4.159:8080/: dial tcp 0.0.0.0:0->10.244.4.159:8080: socket: too many open files
+Post http://10.244.2.144:8080/: dial tcp 0.0.0.0:0->10.244.2.144:8080: socket: too many open files
+Post http://10.244.1.181:8080/: dial tcp 0.0.0.0:0->10.244.1.181:8080: socket: too many open files
+Post http://10.244.4.160:8080/: dial tcp 0.0.0.0:0->10.244.4.160:8080: socket: too many open files
+Post http://10.244.1.180:8080/: dial tcp 0.0.0.0:0->10.244.1.180:8080: socket: too many open files

@@ -1,0 +1,16 @@
+Requests      [total, rate]            315000, 350.00
+Duration      [total, attack, wait]    15m3.151398722s, 14m59.995868243s, 3.155530479s
+Latencies     [mean, 50, 95, 99, max]  2.61603725s, 2.044001184s, 8.090493452s, 10.366581738s, 17.045870521s
+Bytes In      [total, mean]            2120652071, 6732.23
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  83.30%
+Status Codes  [code:count]             0:52620  200:262380  
+Error Set:
+Get http://10.244.4.111:8080/product/L9ECAV7KIM: dial tcp 0.0.0.0:0->10.244.4.111:8080: socket: too many open files
+Get http://10.244.1.132:8080/product/1YMWWN1N4O: dial tcp 0.0.0.0:0->10.244.1.132:8080: socket: too many open files
+Get http://10.244.2.97:8080/product/2ZYFJ3GM2N: dial tcp 0.0.0.0:0->10.244.2.97:8080: socket: too many open files
+Get http://10.244.4.112:8080/product/LS4PSXUNUM: dial tcp 0.0.0.0:0->10.244.4.112:8080: socket: too many open files
+Get http://10.244.1.133:8080/product/0PUK6V6EV0: dial tcp 0.0.0.0:0->10.244.1.133:8080: socket: too many open files
+Get http://10.244.5.155:8080/product/6E92ZMYYFZ: dial tcp 0.0.0.0:0->10.244.5.155:8080: socket: too many open files
+Get http://10.244.2.96:8080/product/66VCHSJNUP: dial tcp 0.0.0.0:0->10.244.2.96:8080: socket: too many open files
+Get http://10.244.5.156:8080/product/9SIQT8TOJO: dial tcp 0.0.0.0:0->10.244.5.156:8080: socket: too many open files
