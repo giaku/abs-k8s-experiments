@@ -6,10 +6,10 @@ In "microservices-demo" that contains the deployment files used during the exper
 The structure is the same for all the other folders:
 
 <ul>
-  <li>Folder "calibration" contains the generic scripts for retrieving cost tables data.</li>
-  <li>Folder "calibration-node-A" shows an example of how the output folder will look like once the calibration scripts have terminated.</li>
-  <li>Folder "stress-test-pairs" shows an example of how the script from calibration has been modified for running two stress tests simultaneously in order to perform the experiments with pairs of workflows together.</li>
-  <li>Folder "stress-test-triplets" shows an example of the stress test script to perform the experiments with triplets of workflows together.</li>
+  <li>"calibration" contains the generic scripts for retrieving cost tables data.</li>
+  <li>"calibration-node-A" shows an example of how the output folder will look like once the calibration scripts have terminated.</li>
+  <li>"stress-test-pairs" shows an example of how the script from calibration has been modified for running two stress tests simultaneously in order to perform the experiments with pairs of workflows together.</li>
+  <li>"stress-test-triplets" shows an example of the stress test script to perform the experiments with triplets of workflows together.</li>
 </ul>
 
 # Experimental setup:
