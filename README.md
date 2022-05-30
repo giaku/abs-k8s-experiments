@@ -16,7 +16,7 @@ The structure is the same for all the other folders:
 
 The scripts must be run on the master node or on a node with the rights edit Kubernetes resources. The stress test tool Vegeta can be run on the master node or elsewhere by by editing the helper script attack.sh which assumes Vegeta is installed on the machine.
 
-
+In the helper script polling-script.py the URL to the Prometheus instance is hard coded and has to be changed.
 
 Virtual Machine OS: Centos 7
 
