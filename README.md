@@ -5,6 +5,8 @@ Folder "calibration" contains the generic scripts for retrieving cost tables dat
 
 Folder "calibration-node-A" shows an example of how the output folder will look like once the calibration scripts have terminated.
 
+Folder "stress-test-pairs" shows an example of how the script from calibration has been modified for running two stress tests simultaneously in order to perform the experiments with pairs of workflows together.
+
 # Requirements:
 
 Virtual Machine OS: Centos 7
