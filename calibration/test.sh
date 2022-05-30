@@ -130,17 +130,19 @@ for j in ${!RPS[@]}; do
     sleep 3
 
     # delete and recreate deployments before the next wave
-    printf "Deleting deployments frontend and currencyservice\n"
+    printf "Deleting deployments...\n"
 
     ./helpers/delete_deploy.sh md2 frontend-w2
     ./helpers/delete_deploy.sh md2 currencyservice-w2
-
+    ./helpers/delete_deploy.sh md2 recommendationservice-w2
+    ./helpers/delete_deploy.sh md2 productcatalogservice-w2
     sleep 3
-    printf "Deleted currencyservice and frontend deployments. Now recreating...\n"
+    printf "Deleted deployments. Now recreating...\n"
 
     ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/frontend-worker2-2pods.yaml
     ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/currencyservice-worker2-2pods.yaml
-
+    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/productcatalogservice-worker2-2pods.yaml
+    ./helpers/apply_deploy.sh md2 /root/microservices-demo/nodes-deployments/recommendationservice-worker2-2pods.yaml
     sleep 3
     printf "Recreated frontend and currencyservice deployments\n"
 
