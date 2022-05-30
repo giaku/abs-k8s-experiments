@@ -21,7 +21,8 @@ pathn = sys.argv[5]
 pathp2 = sys.argv[6]
 shift = sys.argv[7]
 
-PROMETHEUS = 'http://localhost:9090/metrics'
+# CHANGE URL TO PROMETHEUS
+PROMETHEUS = "http://10.101.120.229:9090/"
 
 def replace_node_name(old_name,shift):
   s=int(shift)
@@ -210,7 +211,7 @@ def fetch_pods_metrics_no_istio(sc,start,pf_ni_name,data,shift):
 #{'metric': {'node': '', 'pod': '', 'sname': 'currencyservice', 'workload': 'currencyservice-w4'}, 'value': [1633946593.309, '0.007184996306714634']}
 
 #first establish connection to prometheus server
-prom = PrometheusConnect(url ="http://10.101.120.229:9090/", disable_ssl=True)
+prom = PrometheusConnect(url = PROMETHEUS, disable_ssl=True)
 
 start_time = time.time()
 
