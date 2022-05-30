@@ -19,7 +19,8 @@ wave_duration = int(sys.argv[3]) #530
 pathp = sys.argv[4]
 pathn = sys.argv[5]
 
-PROMETHEUS = 'http://localhost:9090/metrics'
+# CHANGE WITH PROMETHEUS URL
+PROMETHEUS = "http://10.101.120.229:9090/"
 
 def replace_node_name(old_name):
   node_dict={
@@ -102,7 +103,7 @@ def fetch_pods_metrics(sc,start,pf_name,data):
 #{'metric': {'node': '', 'pod': '', 'sname': 'currencyservice', 'workload': 'currencyservice-w4'}, 'value': [1633946593.309, '0.007184996306714634']}
 
 #first establish connection to prometheus server
-prom = PrometheusConnect(url ="http://10.101.120.229:9090/", disable_ssl=True)
+prom = PrometheusConnect(url=PROMETHEUS, disable_ssl=True)
 
 start_time = time.time()
 
