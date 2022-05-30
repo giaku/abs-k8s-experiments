@@ -49,7 +49,6 @@ BEGIN {
       CURRENT=mktime(datetokenz[1]" "datetokenz[2]" "datetokenz[3]" "timetokens[1]" "timetokens[2]" "timetokens[3])
       debug3=""datetokenz[1]" "datetokenz[2]" "datetokenz[3]" "timetokens[1]" "timetokens[2]" "timetokens[3]
       F=folder""filename"-"starttime[i]"-iteration-"i".csv"
-#print F
       if(NR==3) {print HEADERS > F}
       if(CURRENT>=START && CURRENT<=FINE) {print $0 >> F} 
   }}
