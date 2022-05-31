@@ -26,7 +26,7 @@ Virtual Machine OS: Centos 7
 
 Kubernetes version: 1.19
 
-Prometheus and Grafana stack installed ([see guide])(https://k21academy.com/docker-kubernetes/prometheus-grafana-monitoring/) via [helm](https://helm.sh/docs/intro/install/)
+Prometheus and Grafana stack installed (<a href="https://k21academy.com/docker-kubernetes/prometheus-grafana-monitoring/">see guide</a>) via [helm](https://helm.sh/docs/intro/install/)
 
 [Istio](https://istio.io/latest/docs/setup/getting-started/#download)
 
