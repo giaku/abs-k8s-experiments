@@ -1,6 +1,6 @@
 # IMPORTANT
 
-All deployment resources have the affinity constraints, for different clusters different names must be set. In our esperiments four worker nodes were sufficient.
+All deployment resources have the affinity constraints, for different clusters different names must be set. In our experiments four worker nodes were sufficient.
 
       affinity:
         nodeAffinity:
