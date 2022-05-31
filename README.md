@@ -6,10 +6,10 @@ In "microservices-demo" that contains the deployment files used during the exper
 The structure is the same for all the other folders:
 
 <ul>
-  <li>"calibration" contains the generic scripts for retrieving cost tables data.</li>
-  <li>"calibration-node-A" shows an example of how the output folder will look like once the calibration scripts have terminated.</li>
-  <li>"stress-test-pairs" shows an example of how the script from calibration has been modified for running two stress tests simultaneously in order to perform the experiments with pairs of workflows together.</li>
-  <li>"stress-test-triplets" shows an example of the stress test script to perform the experiments with triplets of workflows together.</li>
+  <li>[calibration](https://github.com/giaku/abs-k8s-experiments/tree/main/calibration) contains the generic scripts for retrieving cost tables data.</li>
+  <li>[calibration-node-A](https://github.com/giaku/abs-k8s-experiments/tree/main/calibration-node-A) shows an example of how the output folder will look like once the calibration scripts have terminated.</li>
+  <li>[stress-test-pairs](https://github.com/giaku/abs-k8s-experiments/tree/main/stress-test-pairs) shows an example of how the script from calibration has been modified for running two stress tests simultaneously in order to perform the experiments with pairs of workflows together.</li>
+  <li>[stress-test-triplets](https://github.com/giaku/abs-k8s-experiments/tree/main/stress-test-triplets) shows an example of the stress test script to perform the experiments with triplets of workflows together.</li>
 </ul>
 
 The main script is designed to generate "waves" of one or more workflows invoked with certain RPS. The waves are set in the "CONFIGURATION SECTION" of the main script test.sh. The number of iterations must be passed as parameter on the invocation of the script which can be done directly ./test.sh or via the starter script START.sh.
