@@ -6,7 +6,7 @@ In "microservices-demo" that contains the deployment files used during the exper
 The structure is the same for all the other folders:
 
 <ul>
-  <li> <a href="https://github.com/giaku/abs-k8s-experiments/tree/main/calibration">calibration</a> contains the generic scripts for retrieving cost tables data.</li>
+  <li> <a href="https://github.com/giaku/abs-k8s-experiments/tree/main/calibration">calibration</a> contains the generic scripts running waves of stress tests and retrieving cost tables data.</li>
   <li> <a href="https://github.com/giaku/abs-k8s-experiments/tree/main/calibration-node-A">calibration-node-A</a> shows an example of how the output folder will look like once the calibration scripts have terminated.</li>
   <li> <a href="https://github.com/giaku/abs-k8s-experiments/tree/main/stress-test-pairs">stress-test-pairs</a> shows an example of how the script from calibration has been modified for running two stress tests simultaneously in order to perform the experiments with pairs of workflows together.</li>
   <li> <a href="https://github.com/giaku/abs-k8s-experiments/tree/main/stress-test-triplets">stress-test-triplets</a> shows an example of the stress test script to perform the experiments with triplets of workflows together.</li>
