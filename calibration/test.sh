@@ -94,7 +94,7 @@ for j in ${!RPS[@]}; do
     echo "end polling metrics offset $end_offset"
 
     # invoke python polling script for fetching Prometheus metrics
-    python3.8 /root/new-calibration-old-paper/helpers/polling-script.py $start_offset 15 $end_offset /root/new-calibration-old-paper/$workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-pods.csv /root/new-calibration-old-paper/$workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-nodes.csv >> /root/new-calibration-old-paper/$workdir/out-$now.txt &
+    python3.8 ./helpers/polling-script.py $start_offset 15 $end_offset /root/new-calibration-old-paper/$workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-pods.csv /root/new-calibration-old-paper/$workdir/${WF[j]}-${RPS[j]}-$now-iteration-$i-nodes.csv >> /root/new-calibration-old-paper/$workdir/out-$now.txt &
 
 
     # call helper attack which start vegeta tool for sending requests
