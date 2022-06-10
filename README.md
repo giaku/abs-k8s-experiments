@@ -12,7 +12,7 @@ The structure is the same for all the other folders:
   <li> <a href="https://github.com/giaku/abs-k8s-experiments/tree/main/stress-test-triplets">stress-test-triplets</a> shows an example of the stress test script to perform the experiments with triplets of workflows together.</li>
 </ul>
 
-The main script is designed to generate "waves" of one or more workflows invoked with certain RPS. The waves are set in the "CONFIGURATION SECTION" of the main script test.sh. The number of iterations must be passed as parameter on the invocation of the script which can be done directly ./test.sh or via the starter script START.sh.
+The main script is designed to generate "waves" of one or more workflows invoked with certain RPS. The waves are set in the "CONFIGURATION SECTION" of the main script test.sh. The number of iterations must be passed as parameter on the invocation of the script which can be done directly ```./test.sh``` or via the starter script ```START.sh```.
 
 The README in the subfolders provides further instruction on how to start the stress test.
 
